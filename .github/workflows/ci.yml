@@ -1,0 +1,18 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  checks:
+    runs-on: ubuntu-latest # GitHub-hosted worker
+    steps:
+      - uses: actions/checkout@v4
+      - name: Run checks
+        run: |
+          # Replace with your project's build and test commands
+          echo "Add CI commands here"
